@@ -1,0 +1,27 @@
+{
+  "name": "chatgpt-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "Electron app wrapper for ChatGPT",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.chatgpt.desktop",
+    "productName": "ChatGPT",
+    "directories": {
+      "buildResources": "build"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility",
+      "icon": "build/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.1.3",
+    "electron-builder": "^24.6.0"
+  }
+}
